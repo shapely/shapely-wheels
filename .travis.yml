@@ -102,7 +102,7 @@ before_install:
     - before_install
 
 install:
-    - "build_index_wheel $PROJECT_SPEC --no-binary shapely --build src --no-clean"
+    - "build_index_wheel $PLAT $PROJECT_SPEC --no-binary shapely --build src --no-clean"
 
 script:
     - install_run $PLAT
