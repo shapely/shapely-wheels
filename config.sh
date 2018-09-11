@@ -24,9 +24,6 @@ function run_tests {
         export LC_ALL=C.UTF-8
         export LANG=C.UTF-8
     fi
-    cd ../Shapely
-    mkdir -p /tmp/Shapely
-    cp -R tests /tmp/Shapely
-    cd /tmp/Shapely
+    mkdir tests && cp -R src/tests tests
     python -m pytest -vv -k "not test_fallbacks" tests
 }
