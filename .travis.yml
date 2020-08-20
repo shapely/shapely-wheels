@@ -13,7 +13,7 @@ cache:
 env:
   global:
   - REPO_DIR="Shapely"
-  - BUILD_COMMIT=a992eea
+  - BUILD_COMMIT=20c6cb5
   - PLAT=x86_64
   - UNICODE_WIDTH=32
   - USE_CCACHE=1
