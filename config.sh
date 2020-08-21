@@ -27,7 +27,7 @@ function run_tests {
         export LANG=C.UTF-8
     fi
     mkdir -p /tmp/shapely && cp -R ../Shapely/tests /tmp/shapely
-    cd /tmp/shapely && python -m pytest -vv -k "not test_fallbacks" tests
+    cd /tmp/shapely && python -m pytest -vv -k "not test_fallbacks and not test_minimum_clearance" tests
 }
 
 function build_wheel_cmd {
