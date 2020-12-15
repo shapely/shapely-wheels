@@ -7,7 +7,6 @@ os: linux
 
 cache:
   directories:
-  - $HOME/.ccache
   - $HOME/.cache/pip
 
 env:
@@ -16,7 +15,6 @@ env:
   - BUILD_COMMIT=3a3f91b
   - PLAT=x86_64
   - UNICODE_WIDTH=32
-  - USE_CCACHE=1
 
 addons:
   artifacts:
