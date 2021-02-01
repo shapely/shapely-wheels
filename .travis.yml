@@ -6,9 +6,7 @@ filter_secrets: false
 os: linux
 
 cache:
-  ccache: true
   directories:
-  - $HOME/.ccache
   - $HOME/.cache/pip
 
 env:
@@ -79,8 +77,8 @@ jobs:
     osx_image: xcode9.3
     env:
     - MB_PYTHON_VERSION=3.9
-    - NP_BUILD_DEP=numpy==1.19.4
-    - NP_TEST_DEP=numpy==1.19.4
+    - NP_BUILD_DEP=numpy==1.19.5
+    - NP_TEST_DEP=numpy==1.19.5
     - MB_PYTHON_OSX_VER=10.9
 
 before_install:
