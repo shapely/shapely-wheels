@@ -11,9 +11,7 @@ function build_geos {
 
 
 function pre_build {
-    start_spinner
-    suppress build_geos
-    stop_spinner
+    build_geos
 }
 
 

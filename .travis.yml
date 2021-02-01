@@ -6,7 +6,9 @@ filter_secrets: false
 os: linux
 
 cache:
+  ccache: true
   directories:
+  - $HOME/.ccache
   - $HOME/.cache/pip
 
 env:
