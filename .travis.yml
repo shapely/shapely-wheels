@@ -1,9 +1,8 @@
 language: python
 python: 3.6
-dist: trusty
+dist: focal
 services: docker
 filter_secrets: false
-os: linux
 
 cache:
   ccache: true
@@ -28,30 +27,33 @@ jobs:
   include:
   - name: "Python 3.6 x86_64 linux"
     os: linux
+    arch: amd64
     env:
     - MB_PYTHON_VERSION=3.6
     - NP_BUILD_DEP=numpy==1.15.4
     - NP_TEST_DEP=numpy==1.15.4
   - name: "Python 3.7 x86_64 linux"
     os: linux
+    arch: amd64
     env:
     - MB_PYTHON_VERSION=3.7
     - NP_BUILD_DEP=numpy==1.15.4
     - NP_TEST_DEP=numpy==1.15.4
   - name: "Python 3.8 x86_64 linux"
     os: linux
+    arch: amd64
     env:
     - MB_PYTHON_VERSION=3.8
     - NP_BUILD_DEP=numpy==1.17.5
     - NP_TEST_DEP=numpy==1.17.5
   - name: "Python 3.9 x86_64 linux"
     os: linux
+    arch: amd64
     env:
     - MB_PYTHON_VERSION=3.9
     - NP_BUILD_DEP=numpy==1.19.4
   - name: "3.9 Focal aarch64"
     os: linux
-    dist: focal
     arch: arm64
     env:
     - PLAT=aarch64
