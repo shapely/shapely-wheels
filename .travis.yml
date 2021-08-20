@@ -56,7 +56,6 @@ jobs:
     os: linux
     arch: arm64-graviton2
     group: edge
-    virt: vm
     env:
     - PLAT=aarch64
     - MB_ML_VER=2014
