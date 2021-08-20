@@ -54,7 +54,7 @@ jobs:
     - NP_BUILD_DEP=numpy==1.19.4
   - name: "3.9 Focal aarch64"
     os: linux
-    arch: arm64
+    arch: arm64-graviton2
     env:
     - PLAT=aarch64
     - MB_ML_VER=2014
