@@ -1,9 +1,22 @@
 Changes
 =======
 
+## 2021-03-03
+
+- Upgrade GEOS to 3.9.1.
+
+## 2021-02-01
+
+- Upgrade multibuild commit to 4d1d9ea.
+
+## 2020-12-14
+
+- Add Python 3.9 builds.
+
 ## 2020-08-21
 
-* Auditwheel 3.1.0 breaks shapely, so we have customized build_wheel_cmd to ensure that we are using auditwheel 3.0.0 (#5).
+* Auditwheel 3.1.0 breaks shapely, so we have customized build_wheel_cmd to
+  ensure that we are using auditwheel 3.0.0 (#5).
 
 ## 2020-00-00
 
