@@ -49,7 +49,14 @@ jobs:
     env:
     - MB_PYTHON_VERSION=3.9
     - NP_BUILD_DEP=numpy==1.19.4
-    - NP_TEST_DEP=numpy==1.19.4
+  - name: "3.9 Focal aarch64"
+    os: linux
+    arch: arm64
+    env:
+    - PLAT=aarch64
+    - MB_ML_VER=2014
+    - MB_PYTHON_VERSION=3.9
+    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=numpy==1.19.4
   - name: "Python 3.6 osx"
     os: osx
     language: generic
