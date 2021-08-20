@@ -51,6 +51,7 @@ jobs:
     - NP_BUILD_DEP=numpy==1.19.4
   - name: "3.9 Focal aarch64"
     os: linux
+    dist: focal
     arch: arm64
     env:
     - PLAT=aarch64
