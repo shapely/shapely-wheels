@@ -8,10 +8,6 @@ environment:
     GEOS_VERSION: "3.8.1"
 
   matrix:
-    - PYTHON: "C:\\Python35"
-      ARCH: x86
-    - PYTHON: "C:\\Python35-x64"
-      ARCH: x64
     - PYTHON: "C:\\Python36"
       ARCH: x86
     - PYTHON: "C:\\Python36-x64"
