@@ -11,7 +11,7 @@ function build_geos {
 
 
 function pre_build {
-    build_geos
+    suppress build_geos
 }
 
 
@@ -28,6 +28,13 @@ function run_tests {
     cd /tmp/shapely && python -m pytest -vv -k "not test_fallbacks and not test_minimum_clearance" tests
 }
 
+
+function pip_wheel_cmd {
+    local abs_wheelhouse=$1
+    pip wheel -v $(pip_opts) -w $abs_wheelhouse --no-deps .
+}
+
+
 function build_wheel_cmd {
     # Builds wheel with named command, puts into $WHEEL_SDIR
     #
@@ -42,6 +49,7 @@ function build_wheel_cmd {
     #     BUILD_DEPENDS (optional, default "")
     #     MANYLINUX_URL (optional, default "") (via pip_opts function)
 
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${BUILD_PREFIX}/lib
     local cmd=${1:-pip_wheel_cmd}
     local repo_dir=${2:-$REPO_DIR}
     [ -z "$repo_dir" ] && echo "repo_dir not defined" && exit 1
