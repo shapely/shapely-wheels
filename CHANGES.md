@@ -1,6 +1,11 @@
 Changes
 =======
 
+## 2021-08-24
+
+- Upgrade multibuild commit to 12a0172. 
+- Add aarch64 linux builds for Pythons 3.8 and 3.9.
+
 ## 2021-03-03
 
 - Upgrade GEOS to 3.9.1.
