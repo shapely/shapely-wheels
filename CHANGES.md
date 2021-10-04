@@ -1,6 +1,10 @@
 Changes
 =======
 
+## 2021-10-04
+
+- Upgrade GEOS to 3.9.1 in Windows builds.
+
 ## 2021-08-24
 
 - Upgrade multibuild commit to 12a0172. 
