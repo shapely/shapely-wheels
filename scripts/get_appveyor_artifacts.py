@@ -31,9 +31,12 @@ def download_job_artifacts(job_id):
             f.write(resp.content)
 
 
-def main(branch='master'):
+def main(branch='master', build_version=None):
     print(f"Gathering last build information for branch '{branch}'")
-    resp = requests.get(f'{api}/projects/{account}/{slug}/branch/{branch}')
+    if build_version is None:
+        resp = requests.get(f'{api}/projects/{account}/{slug}/branch/{branch}')
+    else:
+        resp = requests.get(f'{api}/projects/{account}/{slug}/build/{build_version}')
     data = resp.json()
     if 'build' not in data:
         raise ValueError(data)
@@ -62,5 +65,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--branch', default='master',
         help='branch to download artifacts from (default: %(default)s)')
+    parser.add_argument(
+        '--build-version', default=None,
+        help='Build version (like "1.0.56")')
     args = parser.parse_args()
     main(**vars(args))
