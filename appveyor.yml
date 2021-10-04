@@ -5,7 +5,7 @@ platform: x64
 environment:
   global:
     COMPILER: msvc2019
-    GEOS_VERSION: "3.8.1"
+    GEOS_VERSION: "3.9.1"
 
   matrix:
     - PYTHON: "C:\\Python36"
