@@ -11,16 +11,10 @@ cache:
 env:
   global:
   - REPO_DIR=Shapely
-  - BUILD_COMMIT=1.8rc1
+  - BUILD_COMMIT=1.8rc2
   - PLAT=x86_64
   - UNICODE_WIDTH=32
   - USE_CCACHE=1
-
-# addons:
-#   artifacts:
-#     debug: true
-#     paths:
-#     - $(ls ${TRAVIS_BUILD_DIR}/wheelhouse/*.whl)
 
 deploy:
   provider: s3
