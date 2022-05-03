@@ -1,6 +1,11 @@
 Changes
 =======
 
+## 2022-05-03
+
+- Upgrade GEOS to 3.10.2.
+- Remove all builds other than arm64 linux.
+
 ## 2021-10-04
 
 - Upgrade GEOS to 3.9.1 in Windows builds.
