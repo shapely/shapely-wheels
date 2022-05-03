@@ -25,7 +25,7 @@ deploy:
   upload-dir: "${TRAVIS_REPO_SLUG}/${TRAVIS_BUILD_NUMBER}/${TRAVIS_JOB_NUMBER}"
   local_dir: wheelhouse
   on:
-    repo: "mapbox/shapely-wheels"
+    repo: "shapely/shapely-wheels"
     all-branches: true
 
 jobs:
