@@ -69,7 +69,7 @@ function run_tests {
         export LC_ALL=C.UTF-8
         export LANG=C.UTF-8
     fi
-    mkdir -p /tmp/shapely && cp -R ../Shapely/tests /tmp/shapely
+    mkdir -p /tmp/shapely && cp -R ../shapely/tests /tmp/shapely
     cd /tmp/shapely && python -m pytest -vv -k "not test_fallbacks and not test_minimum_clearance" tests
 }
 

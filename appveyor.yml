@@ -60,8 +60,8 @@ build_script:
 
   - ps: 'Write-Host "Copying and checking geos_c.dll" -ForegroundColor Magenta'
   - cd %APPVEYOR_BUILD_FOLDER%
-  - git submodule update --init Shapely
-  - cd Shapely
+  - git submodule update --init shapely
+  - cd shapely
   - git log -1
   - if %ARCH%==x86 ( set CPDIR=DLLs_x86_VC9 )
   - if %ARCH%==x64 ( set CPDIR=DLLs_AMD64_VC9 )
@@ -99,5 +99,5 @@ cache:
   - C:\projects\deps -> %APPVEYOR_BUILD_FOLDER%\scripts\build_geos.cmd
 
 artifacts:
-  - path: Shapely\dist\*.whl
+  - path: shapely\dist\*.whl
     name: wheel
