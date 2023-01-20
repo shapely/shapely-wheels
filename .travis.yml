@@ -44,8 +44,8 @@ jobs:
     - PLAT=aarch64
     - MB_ML_VER=2014
     - MB_PYTHON_VERSION=3.8
-    - NP_BUILD_DEP=oldest-supported-numpy
-    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=oldest-supported-numpy
+    - NP_BUILD_DEP=numpy==1.19.5
+    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=numpy==1.19.5
   - name: "3.9 aarch64"
     os: linux
     arch: arm64-graviton2
@@ -56,8 +56,8 @@ jobs:
     - PLAT=aarch64
     - MB_ML_VER=2014
     - MB_PYTHON_VERSION=3.9
-    - NP_BUILD_DEP=oldest-supported-numpy
-    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=oldest-supported-numpy
+    - NP_BUILD_DEP=numpy==1.19.5
+    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=numpy==1.19.5
   - name: "3.10 aarch64"
     os: linux
     arch: arm64-graviton2
@@ -68,8 +68,8 @@ jobs:
     - PLAT=aarch64
     - MB_ML_VER=2014
     - MB_PYTHON_VERSION=3.10
-    - NP_BUILD_DEP=numpy==oldest-supported-numpy
-    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=oldest-supported-numpy
+    - NP_BUILD_DEP=numpy==1.21.2
+    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=numpy==1.21.2
   - name: "3.11 aarch64"
     os: linux
     arch: arm64-graviton2
@@ -80,8 +80,8 @@ jobs:
     - PLAT=aarch64
     - MB_ML_VER=2014
     - MB_PYTHON_VERSION=3.11
-    - NP_BUILD_DEP=oldest-supported-numpy
-    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=oldest-supported-numpy
+    - NP_BUILD_DEP=numpy==1.22.2
+    - DOCKER_TEST_IMAGE=multibuild/focal_{PLAT} NP_TEST_DEP=numpy==1.22.2
 
 before_install:
     - python -c "import fcntl; fcntl.fcntl(1, fcntl.F_SETFL, 0)"
